@@ -6,7 +6,7 @@
 
 # SARIMA: Forecasting seasonal data with Python and R
 
-ARIMA (Autoregressive Integrated Moving Average) is a major tool used in time series analysis to attempt to forecast future values of a variable based on its present value. For this particular example, a monthly weather dataset from 1941 for Dublin, Ireland from the Irish weather broadcaster Met Eireann is used, and an ARIMA model is constructed to forecast maximum temperature readings using this time series.
+ARIMA (Autoregressive Integrated Moving Average) is a major tool used in time series analysis to forecast future values of a variable based on its present value. For this particular example, a monthly weather dataset from 1941 for Dublin, Ireland from the Irish weather broadcaster Met Eireann is used, and an ARIMA model is constructed to forecast maximum temperature readings using this time series.
 
 ![article-0](article-0.png)
 
