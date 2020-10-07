@@ -16,4 +16,8 @@ Techniques used:
 - LSTM modelling for rainfall forecasting
 - Monte Carlo simulations for extreme weather event modelling
 
-Full article available at [Towards Data Science](https://medium.com/analytics-vidhya/sarima-forecasting-seasonal-data-with-python-and-r-2e7472dfad83?source=---------65----------------------------).
+### Articles
+
+- [Towards Data Science: Modelling Volatile Time Series with LSTM Networks](https://towardsdatascience.com/modelling-volatile-time-series-with-lstm-networks-51250fb7cfa3)
+
+- [Towards Data Science: SARIMA: Forecasting Seasonal Data with Python and R](https://medium.com/analytics-vidhya/sarima-forecasting-seasonal-data-with-python-and-r-2e7472dfad83?source=---------65----------------------------).
