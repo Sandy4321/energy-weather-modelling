@@ -1,13 +1,13 @@
 # Directories 
-mydata<- read.csv("mly532_condensed.csv")
+mydata<- read.csv("mly532.csv")
 attach(mydata)
 summary(mydata)
 
-weatherarima <- ts(mydata$meant[1:732], start = c(1941,11), frequency = 12)
-plot(weatherarima,type="l",ylab="Temperature")
+meant <- ts(mydata$meant[1:732], start = c(1941,11), frequency = 12)
+plot(meant,type="l",ylab="Temperature")
 title("Mean Temperature - Dublin Airport")
 
-stl_weather = stl(weatherarima, "periodic")
+stl_weather = stl(meant, "periodic")
 seasonal_stl_weather   <- stl_weather$time.series[,1]
 trend_stl_weather     <- stl_weather$time.series[,2]
 random_stl_weather  <- stl_weather$time.series[,3]
@@ -25,20 +25,18 @@ library(tseries)
 library(forecast)
 
 # ACF, PACF and Dickey-Fuller Test
-acf(weatherarima, lag.max=20)
-pacf(weatherarima, lag.max=20)
-adf.test(weatherarima)
+acf(meant, lag.max=20)
+pacf(meant, lag.max=20)
+adf.test(meant)
 
-components <- decompose(weatherarima)
+components <- decompose(meant)
 components
 plot(components)
 
 # ARIMA
-fitweatherarima<-auto.arima(weatherarima, trace=TRUE, test="kpss", ic="bic")
+fitweatherarima<-auto.arima(meant, trace=TRUE, test="kpss", ic="bic")
 fitweatherarima
 confint(fitweatherarima)
-plot(weatherarima,type='l')
-title('Mean temperature')
 
 # Forecasted Values From ARIMA
 forecastedvalues=forecast(fitweatherarima,h=183)
@@ -48,6 +46,11 @@ plot(forecastedvalues)
 # Test Values
 test=mydata$meant[733:915]
 test
+
+# Ljung-Box
+Box.test(fitweatherarima$resid, lag=4, type="Ljung-Box")
+Box.test(fitweatherarima$resid, lag=8, type="Ljung-Box")
+Box.test(fitweatherarima$resid, lag=12, type="Ljung-Box")
 
 library(Metrics)
 rmse(forecastedvalues$mean, test)
