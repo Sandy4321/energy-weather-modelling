@@ -14,7 +14,7 @@ Techniques used:
 
 - ARIMA and Prophet modeling for temperature forecasting
 - LSTM modeling for rainfall forecasting
-- ARIMA and LSTM modelling for electricity consumption forecasting
+- ARIMA and LSTM modeling for electricity consumption forecasting
 - Monte Carlo simulations for extreme weather event modeling
 
 ### Articles
