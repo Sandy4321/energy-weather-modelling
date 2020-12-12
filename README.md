@@ -19,6 +19,8 @@ Techniques used:
 
 ### Articles
 
+- [Towards Data Science - ARIMA vs. LSTM: Forecasting Electricity Consumption](https://towardsdatascience.com/arima-vs-lstm-forecasting-electricity-consumption-3215b086da77)
+
 - [Towards Data Science - Modelling Volatile Time Series with LSTM Networks](https://towardsdatascience.com/modelling-volatile-time-series-with-lstm-networks-51250fb7cfa3)
 
 - [Towards Data Science - SARIMA vs Prophet: Forecasting Seasonal Weather Data](https://medium.com/analytics-vidhya/sarima-forecasting-seasonal-data-with-python-and-r-2e7472dfad83?source=---------65----------------------------)
